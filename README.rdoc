@@ -1,28 +1,18 @@
-== README
+Homebrewing can be difficult to troubleshoot: many weeks pass between the initial brew date and the tasting of the final product, and even among brew sessions using similar or identical recipes there are many things that could contribute to flavor differences across batches.  Without structured recipe and note tracking, it is very difficult to reflect on what may have contributed to these positive or negative differences.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BrewNote is a hobby project intended to help myself and any interested homebrewers keep a more structured log of their brew sessions.
 
-Things you may want to cover:
+Currently:
+-New user sign up and authentication in place
 
-* Ruby version
+-DB schema in place with join tables supporting many brewers, grains, malts, hops, yeasts, and secondary additions for a single brew session.
 
-* System dependencies
+-Active Record associations supporting this schema are writtne
 
-* Configuration
+Next steps:
+-Create web forms to interact with DB
 
-* Database creation
+-Set up Filepicker and AWS to allow user picture upload
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
+-Make social: allow other user commenting on brew sessions
 <tt>rake doc:app</tt>.
