@@ -1,0 +1,20 @@
+<h1>New Brew!</h1>
+
+<form action="<%= brews_url %>" method="post">
+	<input type="hidden" name="authenticity_token"
+			value="<%= form_authenticity_token %>">
+	<label for="brew_name">Brew name</label>
+	<input
+		type="text"
+		name="brew[name]"
+		value="<%= @brew.name %>"
+		id="brew_name">
+
+	<label for="brew_date">Brew date</label>
+	<input
+		type="date"
+		name="brew[date]"
+		id="brew_date">
+
+	<input type="submit">
+</form>

@@ -15,4 +15,5 @@ Next steps:
 -Set up Filepicker and AWS to allow user picture upload
 
 -Make social: allow other user commenting on brew sessions
+
 <tt>rake doc:app</tt>.

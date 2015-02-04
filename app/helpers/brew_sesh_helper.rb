@@ -1,0 +1,2 @@
+module BrewSeshHelper
+end

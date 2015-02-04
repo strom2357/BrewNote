@@ -1,0 +1,11 @@
+<h1>My Brews</h1>
+
+<ul id="brews">
+	<% @brews.each do |brew| %>
+		<li>
+			<%= link_to brew.title, brew_path(brew) %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to "New Brew!", new_brew_path %>

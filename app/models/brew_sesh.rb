@@ -1,4 +1,4 @@
 class BrewSesh < ActiveRecord::Base
-	has_many :brews
-	has_many :users
+	belongs_to :brew
+	belongs_to :user
 end

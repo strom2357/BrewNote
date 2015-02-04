@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	attr_reader :password
-	has_many :brews, through: :brew_sesh
+	has_many :brew_seshes
+	has_many :brews, through: :brew_seshes
 
 
 	after_initialize :ensure_session_token
