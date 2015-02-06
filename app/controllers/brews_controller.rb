@@ -15,6 +15,7 @@ class BrewsController < ApplicationController
 	end
 
 	def create
+
 		@brew = Brew.new(brew_params)
 
 
@@ -26,13 +27,16 @@ class BrewsController < ApplicationController
 			@hop_addition.notes = params[:hop_addition][:notes]
 			@hop_addition.save!
 
+			params[:hop].count.times do |i|
+			
 			@hops = Hop.create!({
 				hop_addition_id: @hop_addition.id,
-				name: params[:hop][:name], 
-				form: params[:hop][:form],
-				boil_time: params[:hop][:boil_time],
-				quantity: params[:hop][:quantity]
+				name: params[:hop]["#{i}"][:name], 
+				form: params[:hop]["#{i}"][:form],
+				boil_time: params[:hop]["#{i}"][:boil_time],
+				quantity: params[:hop]["#{i}"][:quantity]
 				})
+			end
 
 			# MALT LOGIC
 			@malt_addition = MaltAddition.create!({brew_id: @brew.id})
