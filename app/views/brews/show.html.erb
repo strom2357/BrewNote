@@ -1,5 +1,7 @@
 <h1><%= @brew.name %></h1>
 
+<h3>Hops</h3>
+<p><%= @brew.hop_addition.notes %></p>
 <% @brew.hops.each do |hop| %>
 <p><%= hop.name %></p>
 <% end %>
