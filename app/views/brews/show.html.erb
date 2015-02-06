@@ -5,3 +5,21 @@
 <% @brew.hops.each do |hop| %>
 <p><%= hop.name %></p>
 <% end %>
+
+<h3>Malts</h3>
+<p><%= @brew.malt_addition.notes %></p>
+<% @brew.malts.each do |malt| %>
+<p><%= malt.name %></p>
+<% end %>
+
+<h3>Grains</h3>
+<p><%= @brew.grain_mash.notes %></p>
+<% @brew.grains.each do |grain| %>
+<p><%= grain.name %></p>
+<% end %>
+
+<h3>Yeast</h3>
+<p><%= @brew.yeast_pitch.notes %></p>
+<% @brew.yeasts.each do |yeast| %>
+<p><%= yeast.name %></p>
+<% end %>

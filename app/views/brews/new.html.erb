@@ -1,26 +1,68 @@
 <h1>New Brew!</h1>
 
 <form action="<%= brews_url %>" method="post">
-	<input type="hidden" name="authenticity_token"
-			value="<%= form_authenticity_token %>">
-	<label for="brew_name">Brew name</label>
-	<input
-		type="text"
-		name="brew[name]"
-		value="<%= @brew.name %>"
-		id="brew_name">
+	<table>
+		<tr>
+			<input type="hidden" name="authenticity_token"
+					value="<%= form_authenticity_token %>">
+			<label for="brew_name">Brew name</label>
+			<td>
+			<input
+				type="text"
+				name="brew[name]"
+				value="<%= @brew.name %>"
+				id="brew_name">
+			</td>
 
-	<label for="brew_date">Brew date</label>
-	<input
-		type="date"
-		name="brew[date]"
-		id="brew_date">
+			<td>
+			<label for="brew_date">Brew date</label>
+			<input
+				type="date"
+				name="brew[date]"
+				id="brew_date">
+			</td>
+			<td>
+			<input type="submit">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<label for="hop_name">Hop name</label>
+			<input
+				type="text"
+				name="hop[name]"
+				id="hop_name">
+			</td>
+		</tr>
 
-	<label for="hop_name">Hop name</label>
-	<input
-		type="text"
-		name="hop[name]"
-		id="brew_name">
+		<tr>
+			<td>
+			<label for="malt_name">Malt name</label>
+			<input
+				type="text"
+				name="malt[name]"
+				id="malt_name">
+			</td>
+		</tr>
 
-	<input type="submit">
+		<tr>
+			<td>
+			<label for="grain_name">Grain name</label>
+			<input
+				type="text"
+				name="grain[name]"
+				id="grain_name">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<label for="yeast_name">Yeast name</label>
+			<input
+				type="text"
+				name="yeast[name]"
+				id="yeast_name">
+			</td>
+		</tr>
+	</table>
 </form>

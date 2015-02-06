@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129185355) do
+ActiveRecord::Schema.define(version: 20150206044037) do
 
   create_table "brew_seshes", force: true do |t|
     t.integer  "user_id"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20150129185355) do
     t.string   "quantity"
     t.string   "mash_temp"
     t.string   "mash_time"
-    t.integer  "mash_id"
+    t.integer  "grain_mash_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
