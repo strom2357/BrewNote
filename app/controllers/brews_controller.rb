@@ -11,7 +11,7 @@ class BrewsController < ApplicationController
 
 	def show
 		@brew = Brew.find(params[:id])
-		render json: @brew.hops
+		render :show
 	end
 
 	def create
