@@ -3,7 +3,7 @@
 <h3>Hops</h3>
 <p><%= @brew.hop_addition.notes %></p>
 <% @brew.hops.each do |hop| %>
-<p><%= hop.name %></p>
+	<p><%= hop.quantity %> of <%= hop.name %>, <%= hop.form %></p>
 <% end %>
 
 <h3>Malts</h3>
