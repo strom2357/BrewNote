@@ -1,5 +1,11 @@
 class Brew < ActiveRecord::Base
 	has_many :brew_seshes
+	has_one :grain_mash
+	has_one :malt_addition
+	has_one :hop_addition
+	has_one :yeast_pitch
+	has_one :fermentation
+	
 	has_many :users, through: :brew_seshes
 	has_many :grains, through: :grain_mash
 	has_many :malts, through: :malt_addition
