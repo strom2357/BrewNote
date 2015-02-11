@@ -10,8 +10,9 @@ class BrewsController < ApplicationController
 	end
 
 	def show
-		@brew = Brew.find(params[:id])
-		render :show
+		#etc... update this so we're just using a json API
+		render :json => Brew.find(params[:id]), include: [:users, :grains, :malts, :hops, :yeasts]
+		#render :show
 	end
 
 	def create
